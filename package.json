@@ -1,0 +1,20 @@
+{
+  "name": "papercanvasx",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "esm-potrace-wasm": "^0.4.1",
+    "lit": "^3.3.0",
+    "paper": "^0.12.18"
+  },
+  "devDependencies": {
+    "typescript": "~5.8.3",
+    "vite": "^6.3.5"
+  }
+}
