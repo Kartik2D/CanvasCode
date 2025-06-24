@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Paper.js Runtime Editor</title>
+    <script type="module" crossorigin src="/CanvasCode/assets/index-CuOqlMRT.js"></script>
+    <link rel="stylesheet" crossorigin href="/CanvasCode/assets/index-D8T5GM15.css">
+  </head>
+  <body>
+    <div id="app">
+      <!-- Menu bar at the top -->
+      <menu-bar></menu-bar>
+
+      <!-- Main content area with resizable layout -->
+      <div class="main-content">
+        <!-- Outer horizontal layout: Left Panel | Canvas | (Tools over Code) -->
+        <resizable-layout panel-count="3">
+          <!-- Left side: Vertical layout with Color Panel (top) and Outline Panel (bottom) -->
+          <resizable-layout
+            slot="panel-0"
+            orientation="vertical"
+            panel-count="2"
+          >
+            <color-panel slot="panel-0"></color-panel>
+            <outline-panel slot="panel-1"></outline-panel>
+          </resizable-layout>
+
+          <!-- Middle: Canvas -->
+          <paper-canvas slot="panel-1">
+            <canvas id="paper-canvas" resize></canvas>
+          </paper-canvas>
+
+          <!-- Right side: Nested vertical layout holding Tools (top) and Code Editor (bottom) -->
+          <resizable-layout
+            slot="panel-2"
+            orientation="vertical"
+            panel-count="2"
+          >
+            <tool-selector slot="panel-0"></tool-selector>
+            <code-editor slot="panel-1"></code-editor>
+          </resizable-layout>
+        </resizable-layout>
+      </div>
+    </div>
+
+  </body>
+</html>
